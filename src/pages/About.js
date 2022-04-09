@@ -50,10 +50,10 @@ const About = () => {
         />
       </div>
       <div className="container">
-        <div className="about-image"></div>
         <div className="about-me">
           <div className="info">
             <h1>PERSONAL INFOS</h1>
+            <div className="about-image home-image"></div>
             <div className="info-data">
               <div>
                 <p>First Name: {personalInfo.Name}</p>

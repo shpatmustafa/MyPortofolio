@@ -2,6 +2,7 @@
   margin: 0%;
   padding: 0%;
   font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
@@ -179,7 +180,7 @@ a {
   z-index: -0;
   opacity: 0;
   position: absolute;
-  height: 44px;
+  height: 50px;
   margin: 0;
   right: 2%;
   background-color: hsl(42, 100%, 50%);
@@ -398,7 +399,7 @@ a {
 .contact {
   background-color: #111;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   position: relative;
   padding-top: 80px;
 }
@@ -482,7 +483,7 @@ a {
   margin-bottom: 30px;
 
   border: 1px solid #111;
-  width: 100%;
+  width: 96.5%;
   background: #252525;
   color: #fff;
   padding: 16px 26px;
@@ -518,7 +519,7 @@ a {
 }
 .form-group textarea {
   width: 86.5%;
-  font-size: 16px;
+
   border: 1px solid #111;
   background: #252525;
   color: #fff;
@@ -528,25 +529,25 @@ a {
   border-radius: 30px;
   outline: none !important;
   transition: 0.3s;
-  min-width: 93%;
+  min-width: 96.5%;
 }
 .required {
   position: absolute;
-  top: 40%;
+  top: 41%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
 }
 .required2 {
   position: absolute;
-  top: 51%;
+  top: 52%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
 }
 .required3 {
   position: absolute;
-  top: 79%;
+  top: 77%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;

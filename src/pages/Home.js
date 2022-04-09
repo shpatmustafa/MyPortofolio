@@ -4,7 +4,7 @@ import Button from "../components/Button";
 const Home = () => {
   return (
     <div className="home container">
-      <div className="home-image"></div>
+      <div className="home-image "></div>
       <div className="home-content">
         <h1 className="title-color">I'M SHPAT MUSTAFA.</h1>
         <h1>WEB DESIGNER</h1>
