@@ -1,4 +1,6 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 900px) {
   /*Home*/
   .home {
     width: 100%;
@@ -11,23 +13,25 @@
     width: 100%;
     margin-top: 0px;
     padding-right: 0px;
+    padding-left: 0px;
   }
   .title-color::after {
     display: none;
   }
   .home-content h1 {
-    font-size: 26px;
-    line-height: 42px;
+    font-size: 50px;
+    line-height: 50px;
     margin: auto;
     padding-left: 0px;
     text-align: center;
     width: 100%;
     font-weight: 800;
+    padding-bottom: 20px;
   }
   .home-image {
     border-radius: 50%;
-    width: 220px;
-    height: 220px;
+    width: 300px;
+    height: 300px;
     border: 4px solid #252525;
     margin: 0 auto 25px;
     margin-top: 150px;
@@ -35,6 +39,7 @@
   }
   .home-content p {
     padding-top: 10px;
+    font-size: 20px;
   }
   .home-button {
     margin: auto;
@@ -78,16 +83,14 @@
     display: none;
   }
   .about-image {
-    border-radius: 50%;
-    width: 220px;
-    height: 220px;
+    border-radius: 20%;
+    width: 320px;
+    height: 320px;
     display: block;
     border: 4px solid #252525;
-    margin: 0 auto 25px;
-    margin-top: 150px;
+
     background-position-y: center;
 
-    margin: auto;
     align-items: center;
 
     background-position-y: center;
@@ -112,6 +115,7 @@
   }
   .info-data p {
     width: 70%;
+    font-size: 25px;
   }
   .about-subtitle {
     padding-left: 0;
@@ -205,6 +209,64 @@
     cursor: pointer;
     margin-bottom: 150px;
   }
+  .required {
+    top: 54%;
+  }
+  .required1 {
+    top: 60.5%;
+  }
+  .required2 {
+    top: 67%;
+  }
+  .required3 {
+    top: 82%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  /*Home*/
+  .home-content h1 {
+    font-size: 26px;
+    line-height: 42px;
+    margin: auto;
+    padding-left: 0px;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 0px;
+    font-weight: 800;
+  }
+  .home-content p {
+    font-size: initial;
+  }
+  .home-image {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    border: 4px solid #252525;
+    margin: 0 auto 25px;
+    margin-top: 150px;
+    background-position-y: center;
+  }
+  /*About*/
+  .about-image {
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    display: block;
+    border: 4px solid #252525;
+    margin: 0 auto 25px;
+    margin-top: 150px;
+    background-position-y: center;
+
+    margin: auto;
+    align-items: center;
+
+    background-position-y: center;
+  }
+  .info-data p {
+    width: 70%;
+    font-size: 15px;
+  }
+  /*Contact*/
   .required {
     top: 56%;
   }

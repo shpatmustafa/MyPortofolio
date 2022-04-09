@@ -48,13 +48,14 @@ a {
   border-radius: 30px;
   margin-top: 45px;
   box-shadow: 0 0 7px rgb(0 0 0 / 90%);
+  margin-left: 20px;
 }
 .home-content {
   color: white;
-  width: 40%;
+  width: 60%;
   margin: auto 0px;
   font-family: "Poppins", sans-serif;
-
+  padding-left: 100px;
   padding-right: 150px;
 }
 .home-content p {
@@ -62,14 +63,14 @@ a {
   padding: 40px 0px;
 }
 .home-content h1 {
-  font-size: 41px;
+  font-size: 45px;
   line-height: 42px;
   padding-left: 70px;
 }
 .title-color {
   color: #ffb400;
   position: relative;
-  font-size: 51px;
+
   line-height: 62px;
   font-weight: bold;
 }
@@ -221,6 +222,9 @@ a {
 }
 .about-image {
   display: none;
+  background-image: url("../images/dark.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .about-title {
   font-size: 110px;
@@ -533,28 +537,28 @@ a {
 }
 .required {
   position: absolute;
-  top: 41%;
+  top: 42%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
 }
 .required1 {
   position: absolute;
-  top: 41%;
+  top: 42%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
 }
 .required2 {
   position: absolute;
-  top: 52%;
+  top: 54%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
 }
 .required3 {
   position: absolute;
-  top: 77%;
+  top: 80%;
   color: red;
   padding-left: 15px;
   padding-bottom: 10px;
