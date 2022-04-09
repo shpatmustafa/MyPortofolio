@@ -175,7 +175,7 @@ a {
   /* transition: 1s; */
   z-index: 2;
 }
-.link {
+.link p {
   z-index: -0;
   opacity: 0;
   position: absolute;
@@ -194,24 +194,17 @@ a {
   transition: 0.5s;
   z-index: 0;
 }
-.link:hover {
+.link:hover p {
   opacity: 1;
   right: 10%;
   background-color: #ffb400;
   padding: 3px 45px;
+}
+.link:hover i {
+  background-color: #ffb400;
 }
 .link i {
   opacity: 1;
-}
-.li1 .active {
-  background-color: #ffb400;
-}
-.li1 i:hover ~ .link {
-  opacity: 1;
-  right: 10%;
-  background-color: #ffb400;
-  padding: 3px 45px;
-  /* background-color: red; */
 }
 .li1 i:hover {
   color: white;
