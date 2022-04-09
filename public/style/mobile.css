@@ -71,6 +71,9 @@
     background: hsl(42, 100%, 50%);
   }
   /*About*/
+  .about {
+    height: 100%;
+  }
   .about-title {
     display: none;
   }
@@ -100,6 +103,12 @@
   }
   .info-data {
     width: 100%;
+    padding-bottom: 0%;
+    display: flex;
+  }
+  .info-data span {
+    display: block;
+    color: #adb5bd;
   }
   .info-data p {
     width: 70%;
@@ -107,12 +116,34 @@
   .about-subtitle {
     padding-left: 0;
     font-size: 35px;
-    padding-left: 40px;
+    padding-left: 20px;
   }
   .about-secondtitle {
     font-size: 35px;
   }
   .about-me {
     flex-direction: column;
+  }
+  .experience {
+    width: calc(50% - 4%);
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  .experience-years {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .experience-container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  .year-experience p::before {
+    display: none;
+  }
+  .year-experience p {
+    padding-left: 0px;
   }
 }

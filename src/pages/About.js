@@ -56,34 +56,54 @@ const About = () => {
             <div className="about-image home-image"></div>
             <div className="info-data">
               <div>
-                <p>First Name: {personalInfo.Name}</p>
+                <p>
+                  <span>First Name:</span> {personalInfo.Name}
+                </p>
               </div>
               <div>
-                <p>LastName: {personalInfo.LastName}</p>
+                <p>
+                  <span>LastName:</span> {personalInfo.LastName}
+                </p>
               </div>
               <div>
-                <p>Age: {personalInfo.Age}</p>
+                <p>
+                  <span>Age:</span> {personalInfo.Age}
+                </p>
               </div>
               <div>
-                <p>Phone: {personalInfo.Phone}</p>
+                <p>
+                  <span>Phone:</span> {personalInfo.Phone}
+                </p>
               </div>
               <div>
-                <p>Nationality: {personalInfo.Nationality}</p>
+                <p>
+                  <span>Nationality: </span>
+                  {personalInfo.Nationality}
+                </p>
               </div>
               <div>
-                <p>Address: {personalInfo.Address}</p>
+                <p>
+                  <span>Address: </span>
+                  {personalInfo.Address}
+                </p>
               </div>
               <div>
-                <p>Email: {personalInfo.Email}</p>
+                <p>
+                  <span>Status: </span>
+                  {personalInfo.Status}
+                </p>
               </div>
               <div>
-                <p>Status: {personalInfo.Status}</p>
+                <p>
+                  <span>Email: </span>
+                  {personalInfo.Email}
+                </p>
               </div>
             </div>
             <Button
               icon="bx bx-download"
               text="DOWNLOAD CV"
-              classes="home-button btn"
+              classes="about-button btn"
             />
           </div>
           <div className="experience-container">

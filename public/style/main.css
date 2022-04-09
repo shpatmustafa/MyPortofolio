@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 }
 .container {
-  width: 80%;
+  width: 90%;
   margin: auto;
 }
 .title {
@@ -265,6 +265,9 @@ a {
   flex-wrap: wrap;
   padding: 20px 0px;
 }
+.info-data span {
+  color: #adb5bd;
+}
 .info-data div {
   width: 50%;
   padding-bottom: 30px;
@@ -297,9 +300,6 @@ a {
 }
 .about-button {
   width: 230px;
-  margin-left: 80px;
-  position: absolute;
-  top: 67%;
 }
 /*Experience block*/
 .experience {
