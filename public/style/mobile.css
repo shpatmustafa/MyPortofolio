@@ -146,4 +146,75 @@
   .year-experience p {
     padding-left: 0px;
   }
+  /*Portflio*/
+
+  .portfolio-title {
+    padding-left: 0;
+    font-size: 35px;
+    padding-left: 20px;
+  }
+  /*Contact*/
+  .contact-title {
+    display: none;
+  }
+  .contact-subtitle {
+    padding-left: 0px;
+    font-size: 35px;
+    padding-left: 20px;
+  }
+  .contact-display {
+    flex-direction: column;
+  }
+  .contact-icon {
+    width: 100%;
+  }
+  .form {
+    width: 100%;
+  }
+  .form-display {
+    display: block;
+    width: 100%;
+  }
+  .form-group {
+    display: block;
+    width: 100%;
+  }
+  .form-group2 {
+    width: 100%;
+
+    display: block;
+  }
+  .form-group input {
+    width: 100%;
+  }
+  .form-group textarea {
+    width: 100%;
+  }
+  .form-group2:first-child {
+    padding-right: 0px;
+  }
+  .contact-submit {
+    background-color: #111;
+    border: 1px solid #ffb400;
+    color: white;
+
+    border-radius: 50px;
+    margin-top: 30px;
+    font-size: 17px;
+    transition: 0.4s;
+    cursor: pointer;
+    margin-bottom: 150px;
+  }
+  .required {
+    top: 56%;
+  }
+  .required1 {
+    top: 62%;
+  }
+  .required2 {
+    top: 68%;
+  }
+  .required3 {
+    top: 82%;
+  }
 }

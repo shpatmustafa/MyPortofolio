@@ -7,7 +7,7 @@ const Contact = () => {
     <div className="contact">
       <Title
         title="CONTACT"
-        subtitle="GET IN"
+        subtitle="GET IN "
         secondTitle="TOUCH"
         classes="contact-subtitle"
         class="contact-title"

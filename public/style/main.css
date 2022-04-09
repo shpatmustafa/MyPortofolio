@@ -538,6 +538,13 @@ a {
   padding-left: 15px;
   padding-bottom: 10px;
 }
+.required1 {
+  position: absolute;
+  top: 41%;
+  color: red;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
 .required2 {
   position: absolute;
   top: 52%;

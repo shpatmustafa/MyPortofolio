@@ -57,7 +57,7 @@ const ContactForm = () => {
               value={formik.values.email}
             ></input>
             {formik.touched.email && formik.errors.email ? (
-              <div className="required">{formik.errors.email}</div>
+              <div className="required1">{formik.errors.email}</div>
             ) : null}
           </div>
         </div>
