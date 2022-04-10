@@ -633,3 +633,14 @@ a {
   font-size: 20px;
   padding: 30px;
 }
+.cv-link {
+  border: 1px solid #ffb400;
+  border-radius: 30px;
+  padding: 10px 30px;
+  width: fit-content;
+  color: #fff;
+  transition: 0.5s;
+}
+.cv-link:hover {
+  background-color: #ffb400;
+}

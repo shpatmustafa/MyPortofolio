@@ -4,7 +4,7 @@ const Experience = (props) => {
   return (
     <div className="experience-years">
       {props.year.map((years) => (
-        <div className="experience">
+        <div className="experience" key={years.key}>
           <div className="year-experience">
             <h1>{years.number}</h1>
             <span>{years.icon}</span>

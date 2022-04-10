@@ -25,30 +25,33 @@ const About = () => {
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
       age_now--;
     }
-    console.log(age_now);
     return age_now;
   };
 
   const years = [
     {
-      number: "12",
+      number: "1",
       icon: "+",
       title: "YEARS OF EXPERIENCE",
+      key: "1",
     },
     {
-      number: "97",
+      number: "3",
       icon: "+",
       title: "COMPLETED PROJECTS",
+      key: "2",
     },
     {
-      number: "81",
+      number: "2",
       icon: "+",
       title: "HAPPY CUSTOMERS",
+      key: "3",
     },
     {
-      number: "53",
+      number: "3",
       icon: "+",
       title: "AWARDS WON",
+      key: "4",
     },
   ];
 
@@ -63,72 +66,78 @@ const About = () => {
           class="about-title"
         />
       </div>
-      <div className="container">
-        <div className="about-me">
-          <div className="info">
-            <h1>PERSONAL INFOS</h1>
-            <div className="about-image "></div>
-            <div className="info-data">
-              <div>
-                <p>
-                  <span>First Name:</span> {personalInfo.firstName}
-                </p>
+      {personalInfo ? (
+        <div className="container">
+          <div className="about-me">
+            <div className="info">
+              <h1>PERSONAL INFOS</h1>
+              <div className="about-image "></div>
+              <div className="info-data">
+                <div>
+                  <p>
+                    <span>First Name:</span> {personalInfo.firstName}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>LastName:</span> {personalInfo.lastName}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Age:</span>{" "}
+                    {calculate_age(
+                      new Date(personalInfo.birthDate).toLocaleDateString()
+                    )}
+                    {}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Phone:</span> {personalInfo.phoneNo}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Nationality: </span>
+                    {personalInfo.nationality}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Address: </span>
+                    {personalInfo.city}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Status: </span>
+                    {personalInfo.jobStatus}
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    <span>Email: </span>
+                    {personalInfo.email}
+                  </p>
+                </div>
               </div>
-              <div>
-                <p>
-                  <span>LastName:</span> {personalInfo.lastName}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Age:</span>{" "}
-                  {calculate_age(
-                    new Date(personalInfo.birthDate).toLocaleDateString()
-                  )}
-                  {}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Phone:</span> {personalInfo.phoneNo}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Nationality: </span>
-                  {personalInfo.nationality}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Address: </span>
-                  {personalInfo.city}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Status: </span>
-                  {personalInfo.jobStatus}
-                </p>
-              </div>
-              <div>
-                <p>
-                  <span>Email: </span>
-                  {personalInfo.email}
-                </p>
-              </div>
+              <a
+                className="cv-link"
+                href={personalInfo.cvLink}
+                classes="about-button btn"
+              >
+                Download CV
+              </a>
             </div>
-            <Button
-              icon="bx bx-download"
-              text="DOWNLOAD CV"
-              classes="about-button btn"
-            />
-          </div>
-          <div className="experience-container">
-            <Experience year={years} />
+            <div className="experience-container">
+              <Experience year={years} />
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <p className="no-data">No data found!</p>
+      )}
     </div>
   );
 };

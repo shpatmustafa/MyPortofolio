@@ -25,6 +25,7 @@ const ContactForm = () => {
         .required("Please write a messawge"),
     }),
     onSubmit: (values) => {
+      //TO DO SENT DATA TO EMAIL
       console.log(values);
     },
   });
