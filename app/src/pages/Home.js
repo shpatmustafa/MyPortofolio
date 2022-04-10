@@ -1,19 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "../components/Button";
+import api from "../utils/axios";
 
 const Home = () => {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = () => {
+    api.get("/user/6252f29254f74e6a862248fc").then((myData) => {
+      setData(myData.data.data);
+    });
+  };
+
   return (
     <div className="home container">
       <div className="home-image "></div>
       <div className="home-content">
-        <h1 className="title-color">I'M SHPAT MUSTAFA.</h1>
-        <h1>WEB DESIGNER</h1>
-        <p>
-          I'm a Tunisian based web designer & front‑end developer focused on
-          crafting clean & user‑friendly experiences, I am passionate about
-          building excellent software that improves the lives of those around
-          me.
-        </p>
+        <h1 className="title-color">
+          I'M {data.firstName} {data.lastName}
+        </h1>
+        <h1>{data.jobTitle}</h1>
+        <p>{data.biography}</p>
         <div>
           <Button
             icon="bx bx-right-arrow-alt"
