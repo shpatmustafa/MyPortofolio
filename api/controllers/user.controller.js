@@ -19,6 +19,8 @@ const getOne = (req, res, next) => {
 
 const create = (req, res, next) => {
   const data = req.body;
+  console.log("BODY REQ");
+  console.log(req.body);
   User.findOne({
     $or: [{ email: data.email }, { full_name: data.full_name }],
   }).then((user) => {
