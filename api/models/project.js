@@ -15,6 +15,10 @@ const ProjectSchema = new mongoose.Schema({
     type: String,
     required: [true, "Description is required!"],
   },
+  userID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
+  },
 });
 const Project = mongoose.model("Project", ProjectSchema);
 
