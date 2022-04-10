@@ -1,34 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import Title from "../components/Title";
+import api from "../utils/axios";
 
 const Portfolio = () => {
-  const images = [
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-    {
-      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
-      title: "MOCKUP PROJECT",
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
+  const getProjects = () => {
+    api.get("/project").then((myData) => {
+      setProjects(myData.data.data);
+    });
+  };
+
   return (
     <div className="portfolio">
       <Title
@@ -38,19 +25,13 @@ const Portfolio = () => {
         secondTitle="PORTFOLIO"
         class="about-title"
       />
-      <div className="my-project">
-        <ul>
-          <li>
-            <a href="#">PROJECT</a>
-          </li>
-          <li>
-            <a href="#">DESIGN</a>
-          </li>
-        </ul>
-      </div>
-      <div className="portfolio-display">
-        <ProjectCard image={images} />
-      </div>
+      {projects ? (
+        <div className="portfolio-display">
+          <ProjectCard projects={projects} />
+        </div>
+      ) : (
+        <p className="no-data">No project found!</p>
+      )}
     </div>
   );
 };

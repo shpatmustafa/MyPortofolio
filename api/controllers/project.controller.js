@@ -2,8 +2,8 @@ const Project = require("../models/project");
 const APIError = require("../utils/APIError");
 const http_status = require("http-status");
 
-const getOne = (req, res, next) => {
-  User.findOne({ _id: req.params.project_id })
+const getAll = (req, res, next) => {
+  Project.find()
     .lean()
     .exec()
     .then((data) => {
@@ -38,4 +38,4 @@ const create = (req, res, next) => {
       next(new APIError(e.message, http_status.METHOD_NOT_ALLOWED));
     });
 };
-module.exports = { getOne, create };
+module.exports = { getAll, create };

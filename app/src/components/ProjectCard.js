@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectCard = (props) => {
-  return props.image.map((images) => (
+  return props.projects.map((p) => (
     <Link className="project-card container1" to="/">
-      <img src={images.image}></img>
+      <img src={p.image[0].name}></img>
 
       <div>
-        <h1>{images.title}</h1>
+        <h1>{p.name}</h1>
       </div>
     </Link>
   ));
