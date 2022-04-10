@@ -19,7 +19,10 @@ const Home = () => {
     <>
       {data ? (
         <div className="home container">
-          <div className="home-image "></div>
+          <div
+            className="home-image"
+            style={{ backgroundImage: `url('${data.profilePic}')` }}
+          ></div>
           <div className="home-content">
             <h1 className="title-color">
               I'M {data.firstName} {data.lastName}
