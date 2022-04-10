@@ -60,4 +60,4 @@ const create = (req, res, next) => {
   });
 };
 
-module.exports = { getOne, getAll, update, create };
+module.exports = { getOne, create };
