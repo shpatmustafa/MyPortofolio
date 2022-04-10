@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../components/Button";
 import Experience from "../components/Experience";
 import Title from "../components/Title";
+import api from "../utils/axios";
 
 const About = () => {
+  const [personalInfo, setPersonalInfo] = useState([]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = () => {
+    api.get("/user/6252f29254f74e6a862248fc").then((myData) => {
+      setPersonalInfo(myData.data.data);
+    });
+  };
+
+  const calculate_age = (dob1) => {
+    var today = new Date();
+    var birthDate = new Date(dob1); // create a date object directly from `dob1` argument
+    var age_now = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+      age_now--;
+    }
+    console.log(age_now);
+    return age_now;
+  };
+
   const years = [
     {
       number: "12",
@@ -27,17 +52,6 @@ const About = () => {
     },
   ];
 
-  const personalInfo = {
-    Name: "Shpat",
-    LastName: "Mustafa",
-    Age: "19",
-    Phone: "+38349346548",
-    Nationality: "Kosovar",
-    Address: "Prishtina",
-    Email: "shpatxmustafa@gmail.com",
-    Status: "freelancer",
-  };
-
   return (
     <div className="about">
       <div className="about-">
@@ -57,46 +71,50 @@ const About = () => {
             <div className="info-data">
               <div>
                 <p>
-                  <span>First Name:</span> {personalInfo.Name}
+                  <span>First Name:</span> {personalInfo.firstName}
                 </p>
               </div>
               <div>
                 <p>
-                  <span>LastName:</span> {personalInfo.LastName}
+                  <span>LastName:</span> {personalInfo.lastName}
                 </p>
               </div>
               <div>
                 <p>
-                  <span>Age:</span> {personalInfo.Age}
+                  <span>Age:</span>{" "}
+                  {calculate_age(
+                    new Date(personalInfo.birthDate).toLocaleDateString()
+                  )}
+                  {}
                 </p>
               </div>
               <div>
                 <p>
-                  <span>Phone:</span> {personalInfo.Phone}
+                  <span>Phone:</span> {personalInfo.phoneNo}
                 </p>
               </div>
               <div>
                 <p>
                   <span>Nationality: </span>
-                  {personalInfo.Nationality}
+                  {personalInfo.nationality}
                 </p>
               </div>
               <div>
                 <p>
                   <span>Address: </span>
-                  {personalInfo.Address}
+                  {personalInfo.city}
                 </p>
               </div>
               <div>
                 <p>
                   <span>Status: </span>
-                  {personalInfo.Status}
+                  {personalInfo.jobStatus}
                 </p>
               </div>
               <div>
                 <p>
                   <span>Email: </span>
-                  {personalInfo.Email}
+                  {personalInfo.email}
                 </p>
               </div>
             </div>

@@ -1,7 +1,34 @@
 import React from "react";
+import ProjectCard from "../components/ProjectCard";
 import Title from "../components/Title";
 
 const Portfolio = () => {
+  const images = [
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+    {
+      image: "https://tunis.ibthemespro.com/img/projects/project-2.jpg",
+      title: "MOCKUP PROJECT",
+    },
+  ];
   return (
     <div className="portfolio">
       <Title
@@ -20,6 +47,9 @@ const Portfolio = () => {
             <a href="#">DESIGN</a>
           </li>
         </ul>
+      </div>
+      <div className="portfolio-display">
+        <ProjectCard image={images} />
       </div>
     </div>
   );

@@ -34,7 +34,7 @@
     height: 300px;
     border: 4px solid #252525;
     margin: 0 auto 25px;
-    margin-top: 150px;
+    margin-top: 50px;
     background-position-y: center;
   }
   .home-content p {
@@ -221,6 +221,24 @@
   .required3 {
     top: 82%;
   }
+  .project-card {
+    width: 40%;
+    position: relative;
+  }
+  .portfolio {
+    height: 100vh;
+    width: 100%;
+  }
+  .project-card img {
+    margin-left: 0px;
+  }
+  .portfolio-display {
+    width: 93%;
+    display: flex;
+    margin-top: 40px;
+    margin-left: 0px;
+    justify-content: space-around;
+  }
 }
 @media only screen and (max-width: 600px) {
   /*Home*/
@@ -243,7 +261,7 @@
     height: 220px;
     border: 4px solid #252525;
     margin: 0 auto 25px;
-    margin-top: 150px;
+    margin-top: 50px;
     background-position-y: center;
   }
   /*About*/
@@ -278,5 +296,17 @@
   }
   .required3 {
     top: 82%;
+  }
+  .portfolio {
+    height: 100%;
+  }
+
+  .portfolio-display {
+    width: 93%;
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+    padding-left: 0px;
   }
 }
